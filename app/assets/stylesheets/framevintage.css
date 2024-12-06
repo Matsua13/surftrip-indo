@@ -1,0 +1,16 @@
+/* Main Content Styles */
+.vintage-frame {
+  padding: 20px;
+  margin: 20px auto;
+  /* Center the main section */
+  max-width: 1200px;
+  /* Limit the width for better readability */
+  background-color: #fff;
+  /* White background for contrast */
+  border: 1px solid #d0bfa8;
+  /* Soft vintage border color */
+  border-radius: 8px;
+  /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}

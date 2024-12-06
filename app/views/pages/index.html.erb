@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surftrip Around Indonesia & Sri Lanka</title>
+
+  <!-- External CSS Files with Rails Asset Pipeline -->
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag 'scrolling-wrapper' %>
+  <%= stylesheet_link_tag 'img' %>
+  <%= stylesheet_link_tag 'alert' %>
+  <%= stylesheet_link_tag 'footer' %>
+  <%= stylesheet_link_tag 'video' %>
+  <%= stylesheet_link_tag 'navbar' %>
+  <%= stylesheet_link_tag 'framevintage' %>
+  <%= stylesheet_link_tag 'play-pause-button' %>
+
+  <!-- Optionally include specific fonts or meta tags here -->
+</head>
+
+<body>
+  <!-- Header Section with Banner and Navigation -->
+  <header>
+    <div class="banner">
+      <!-- Video background for the banner -->
+      <video autoplay muted loop class="banner-video">
+        <source src="<%= asset_path('drone.mp4') %>" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Banner Text -->
+      <div class="banner-text">
+        <h1>𐌔𐌵𐌓𐌅 𐌕𐌓𐌉𐌐 𐌀𐌓Ꝋ𐌵𐌍𐌃 𐌉𐌍𐌃Ꝋ𐌍𐌄𐌔𐌉𐌀 & 𐌔𐌓𐌉 𐌋𐌀𐌍𐌊𐌀</h1>
+      </div>
+    </div>
+
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <li><%= link_to 'Lombok', lombok_path %></li>
+        <li><%= link_to 'Medewi', medewi_path %></li>
+        <li><%= link_to 'Bukit Bali', bukit_bali_path %></li>
+        <li><%= link_to 'Sumbawa', sumbawa_path %></li>
+        <li><%= link_to 'Arugam Bay', arugam_bay_path %></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="vintage-frame">
+    <section>
+      <!-- Flash Alert -->
+      <% if flash[:warning] %>
+        <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
+          <div class="flash-text">
+            <span><%= flash[:warning] %></span>
+          </div>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <% end %>
+
+      <!-- Indonesia Section -->
+      <h2>Indonesia</h2>
+      <img src="https://www.stokedfortravel.com/wp-content/uploads/2020/02/best-bali-surf-spots-uluwatu-padang-keramas-canggu-medewi-1920x960.jpg"
+           width="500" height="250" alt="Indonesia Surf Spot">
+      <p>A goofy paradise.</p>
+      <p>With plenty of choices of islands and surf spots, you'll always find something that'll please you, from
+        epic surf breaks that might just make you question your life choices, to waterfalls that are
+        Instagram-worthy and rice paddies so green they'll make your eyes do a double-take.</p>
+      <p>Plus, the Indonesian people are some of the friendliest you'll ever meet, always ready to share a smile, a story, or an
+        incredible local dish. It’s a place where the waves are as warm as the welcome.</p>
+
+      <!-- Sri Lanka Section -->
+      <h2>Sri Lanka</h2>
+      <img src="https://assets-global.website-files.com/5bbf9acbb5282f5328ad03fd/64df2e32ddd9f6557184e7d7_1200x630-thumb.jpg"
+           width="500" height="250" alt="Sri Lanka Beach">
+      <p>A regular paradise.</p>
+      <p>We went for Sri Lanka in July and in this period, it's Arugam Bay season with plenty of right-handers
+        mellow waves, perfect for those who prefer a chill ride over a gnarly one.</p>
+      <p>But that’s not all; the island also boasts epic safaris where you can spot majestic elephants casually strolling by while you’re
+        trying to catch the best sunset. It’s like a surf-and-safari combo deal where every day is an adventure
+        and every night is a party.</p>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Surftrip Around Indonesia & Sri Lanka</p>
+  </footer>
+
+  <!-- External JavaScript Files -->
+  <%= javascript_include_tag 'scrolling-wrapper' %>
+  <%= javascript_include_tag 'play-pause' %>
+</body>
+</html>

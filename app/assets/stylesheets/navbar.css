@@ -1,0 +1,36 @@
+/* Navigation Styles */
+nav {
+  background-color: #fff;
+  /* White background for the navigation */
+  border-bottom: 1px solid #ddd;
+  /* Light border for a classic touch */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: #333;
+  /* Dark text for contrast */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  /* Vintage font for navigation links */
+}
+
+nav li a:hover {
+  background-color: #eee;
+  /* Lighter background on hover for a subtle effect */
+  color: #000;
+  /* Darker text color on hover for better readability */
+}

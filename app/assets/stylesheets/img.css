@@ -1,0 +1,207 @@
+/* Image Styles */
+img {
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 8px;
+  /* Rounded corners for a vintage feel */
+  border: 1px solid #d0bfa8;
+  /* Soft border color to match the main section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for a classic look */
+  background-color: #f9f9f9;
+  /* Slight background to give a vintage touch */
+  padding: 5px;
+  /* Padding around the image */
+}
+
+.container {
+  text-align: center;
+  /* Center the content inside this container */
+}
+
+.full-width-image {
+  width: 100%;
+  /* Occupe toute la largeur du conteneur */
+  height: auto;
+  /* Hauteur automatique pour conserver les proportions */
+  max-height: 300px;
+  /* Hauteur maximale pour ne pas être trop grande */
+  object-fit: cover;
+  /* Assure que l'image couvre l'espace sans déformation */
+}
+
+
+/* Gallery Styles */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  /* Space between images */
+  overflow: auto;
+  /* Allow scrolling if needed */
+  padding: 10px;
+  /* Padding around the gallery */
+  width: 100%;
+  /* Ensure the container takes full width */
+}
+
+.gallery img {
+  max-width: 100%;
+  /* Make images responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+  max-height: 310px;
+  /* Ensure images fit within the container */
+  border: 2px solid #d0bfa8;
+  /* Border color to match the main section */
+  border-radius: 8px;
+  /* Rounded corners for a vintage look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  background-color: #fff;
+  /* White background for contrast */
+  object-fit: cover;
+  /* Ensure images cover the space without distortion */
+}
+
+/* Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  /* Réduit l'espace entre les éléments de la grille */
+  padding: 0;
+  max-width: 1000px;
+  /* Ajustez cette valeur selon vos besoins */
+  margin: 0 auto;
+  /* Centre le conteneur si nécessaire */
+}
+
+
+.photo-item {
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  margin: 0;
+  /* Réduit les marges autour de chaque élément photo */
+  box-sizing: border-box;
+  /* Assure que padding et bordure sont inclus dans la largeur totale */
+  width: 100%;
+  /* Ajuste la largeur pour qu'elle soit égale à celle de la colonne */
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  /* Assure que padding et bordure sont inclus dans la largeur totale */
+}
+
+.photo-item img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Make sure the photo-item itself has a consistent height */
+.photo-item {
+  width: 230px;
+}
+
+/* Polaroid effect */
+.polaroid-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.polaroid {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 200px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+}
+
+.polaroid p {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Mosaic effect */
+.mosaic-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.mosaic-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mosaic-item.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .polaroid-gallery {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .polaroid {
+      width: 150px;
+  }
+
+  .mosaic-container {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .gallery {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .gallery img {
+      max-height: 200px;
+  }
+
+  .polaroid {
+      width: 120px;
+  }
+
+  .mosaic-container {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+}

@@ -17,7 +17,9 @@
   <%= stylesheet_link_tag 'framevintage' %>
   <%= stylesheet_link_tag 'play-pause-button' %>
 
-  <!-- Optionally include specific fonts or meta tags here -->
+  <!-- Optionally include Javascript -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </head>
 
 <body>
@@ -52,16 +54,15 @@
   <main class="vintage-frame">
     <section>
       <!-- Flash Alert -->
-      <% if flash[:warning] %>
-        <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
-          <div class="flash-text">
-            <span><%= flash[:warning] %></span>
-          </div>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+      <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
+        <div class="flash-text">
+          <span>The purpose of this site is to train me in coding. It is personal, all photos & videos are
+            mine, so it is not professional content.</span>
         </div>
-      <% end %>
+        <a data-bs-dismiss="alert" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
 
       <!-- Indonesia Section -->
       <h2>Indonesia</h2>

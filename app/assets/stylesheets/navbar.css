@@ -37,3 +37,67 @@ nav li a:hover {
   border-radius: 20px; /* Rounded corners for a softer look */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern feel */
 }
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Default hidden for large screens */
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 11; /* Ensure it appears above everything */
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  margin: 5px 0;
+  background-color: white;
+  border: 1px solid black; /* Add a fine black border */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.hamburger:hover div {
+  border-color: #333; /* Slightly darker black for hover effect */
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide navigation links by default */
+    flex-direction: column; /* Stack items vertically */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    position: absolute;
+    top: 25%; /* Start from the middle of the screen */
+    right: 0;
+    width: 50%; /* Full width */
+    height: 72.6%; /* Take up half the screen */
+    transform: translateY(-50%); /* Vertically center the menu */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Optional border for design */
+    z-index: 10; /* Ensure it appears correctly layered */
+  }
+
+  nav.active ul {
+    display: flex; /* Show navigation links when active */
+    justify-content: center; /* Center links horizontally */
+    align-items: center; /* Center links vertically */
+    gap: 20px; /* Add spacing between menu items */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on small screens */
+  }
+}
+
+/* Optional: Hamburger icon transition */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}

@@ -59,3 +59,34 @@ h2 {
   margin-top: 0;
   color: #333;
 }
+
+/* Main Content Section Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  width: 100%;
+  max-width: 800px; /* Limit width for readability */
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 20px; /* Adjust margin for spacing */
+  color: #333;
+}
+
+img {
+  margin-top: 20px;
+  width: 100%; /* Ensures responsiveness */
+  max-width: 500px; /* Limits image size */
+  height: auto;
+  display: block; /* Ensures image is treated as a block-level element */
+  margin-left: auto;
+  margin-right: auto;
+}

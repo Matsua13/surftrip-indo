@@ -1,36 +1,39 @@
 /* Navigation Styles */
 nav {
-  background-color: #fff;
-  /* White background for the navigation */
-  border-bottom: 1px solid #ddd;
-  /* Light border for a classic touch */
+  background-color: #fff; /* White background for the navigation */
+  border-bottom: 1px solid #ddd; /* Light border for a classic touch */
+  display: flex;
+  justify-content: center; /* Center the entire navbar */
+  padding: 10px 0; /* Vertical padding for some breathing room */
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  display: flex; /* Use flexbox for better layout control */
 }
 
 nav li {
-  float: left;
+  margin: 0 15px; /* Space out the links */
 }
 
 nav li a {
   display: block;
-  color: #333;
-  /* Dark text for contrast */
+  color: #333; /* Dark text for contrast */
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 18px; /* Adjusted padding for better clickability */
   text-decoration: none;
-  font-family: 'Georgia', serif;
-  /* Vintage font for navigation links */
+  font-family: 'Georgia', serif; /* Vintage font for navigation links */
+  font-size: 16px; /* Slightly larger font size for readability */
+  text-transform: uppercase; /* Add modern touch by making the text uppercase */
+  letter-spacing: 1px; /* Add space between letters for a sleek look */
+  transition: all 0.3s ease; /* Smooth transition effect on hover */
 }
 
 nav li a:hover {
-  background-color: #eee;
-  /* Lighter background on hover for a subtle effect */
-  color: #000;
-  /* Darker text color on hover for better readability */
+  background-color: #f7f7f7; /* Subtle light background on hover */
+  color: #000; /* Darker text color on hover for better readability */
+  border-radius: 20px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern feel */
 }

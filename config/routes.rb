@@ -1,5 +1,5 @@
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
   root "pages#index"  # This will set the 'index' action of the 'home' controller as the welcome page.
   # Other routes for your application
   get "/lombok", to: "locations#lombok"

@@ -90,3 +90,24 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Return to Welcome Page button */
+.return-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.return-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d0bfa8;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.return-button:hover {
+  background-color: #b2a68f;
+}

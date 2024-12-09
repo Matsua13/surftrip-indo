@@ -71,8 +71,10 @@ main {
 }
 
 section {
-  width: 100%;
-  max-width: 800px; /* Limit width for readability */
+  display: block;
+  unicode-bidi: isolate;
+  /* width: 100%;
+  max-width: 800px; Limit width for readability */
 }
 
 h2 {

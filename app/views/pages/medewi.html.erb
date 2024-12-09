@@ -3,6 +3,27 @@
         <h2>📍 Medewi</h2>
         <p>Did you know that Medewi Point is renowned for its longest left-hander wave in Indonesia?</p>
         <div><a href="https://www.youtube.com/watch?v=zh346eK5Ws0">Look at this beauty</a></div>
+
+        <div class="polaroid-gallery">
+          <div class="polaroid">
+            <%= image_tag("medewi/broken-board-medewi.jpg", alt: "Photo 1") %>
+            <p>Broken Board</p>
+          </div>
+          <div class="polaroid">
+            <%= image_tag("medewi/readytosurf1.jpg", alt: "Photo 2") %>
+            <p>Ready to surf</p>
+          </div>
+          <div class="polaroid">
+            <%= image_tag("medewi/medewivillage1.jpg", alt: "Photo 3") %>
+            <p>Medewi village</p>
+          </div>
+        </div>
+          <p>Medewi is the perfect place if you want to focus solely on surfing and learn from the best. To be honest,
+            there's not much to do except catch some of the best waves.</p>
+          <p>Beyond the waves, the people of Medewi are incredibly lovely, adding a warm and welcoming vibe to the
+            area. You can enjoy laid-back interactions and chill activities with the locals, who often gather for
+            relaxed beachside chats or small community events. It’s a great spot to immerse yourself in surfing
+            while experiencing the friendly and easygoing atmosphere of the region.</p>
         <div class="mosaic-container">
           <div class="mosaic-item big">
             <%= image_tag("medewi/b&w1.jpg", alt: "Photo 1", width: 200, height: 310) %>
@@ -48,26 +69,6 @@
           </div>
         </div>
 
-        <p>Medewi is the perfect place if you want to focus solely on surfing and learn from the best. To be honest,
-            there's not much to do except catch some of the best waves.</p>
-        <p>Beyond the waves, the people of Medewi are incredibly lovely, adding a warm and welcoming vibe to the
-            area. You can enjoy laid-back interactions and chill activities with the locals, who often gather for
-            relaxed beachside chats or small community events. It’s a great spot to immerse yourself in surfing
-            while experiencing the friendly and easygoing atmosphere of the region.</p>
-        <div class="polaroid-gallery">
-          <div class="polaroid">
-            <%= image_tag("medewi/broken-board-medewi.jpg", alt: "Photo 1") %>
-            <p>Broken Board</p>
-          </div>
-          <div class="polaroid">
-            <%= image_tag("medewi/readytosurf1.jpg", alt: "Photo 2") %>
-            <p>Ready to surf</p>
-          </div>
-          <div class="polaroid">
-            <%= image_tag("medewi/medewivillage1.jpg", alt: "Photo 3") %>
-            <p>Medewi village</p>
-          </div>
-        </div>
         <div class="return-button-container">
           <%= link_to 'Return to Welcome Page', root_path, class: 'return-button' %>
         </div>

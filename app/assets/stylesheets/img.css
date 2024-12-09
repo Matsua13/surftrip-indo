@@ -140,11 +140,20 @@ img {
   color: #333;
 }
 
+.mosaic-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure items scale properly */
+  gap: 10px;
+}
+
+
 /* Mosaic effect */
 .mosaic-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 10px;
+  max-width: 100%; /* Ensure it takes up the available width */
+  margin: 0 auto; /* Center the grid container */
 }
 
 .mosaic-item {
@@ -154,8 +163,8 @@ img {
 
 .mosaic-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* instead of 100? */
+  object-fit: contain; /* instead of cover? */
 }
 
 .mosaic-item.big {

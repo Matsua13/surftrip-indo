@@ -1,0 +1,15 @@
+#section3 {
+  text-align: center; /* Centers the content horizontally */
+}
+
+#section3 h2,
+#section3 p {
+  margin: 0 auto; /* Optional: to make sure there is no extra margin */
+  max-width: 800px; /* Optional: limits the width of the text, to prevent it from stretching too wide */
+}
+
+.gallery {
+  display: flex;
+  justify-content: center; /* Centers the gallery items horizontally */
+  gap: 20px; /* Optional: adds some space between the images */
+}

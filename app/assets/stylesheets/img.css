@@ -72,13 +72,11 @@ img {
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  /* Réduit l'espace entre les éléments de la grille */
+  gap: 5px; /* Réduit l'espace entre les éléments de la grille */
   padding: 0;
-  max-width: 1000px;
-  /* Ajustez cette valeur selon vos besoins */
-  margin: 0 auto;
-  /* Centre le conteneur si nécessaire */
+  max-width: 100%; /* Ensures the grid takes up the full available width */
+  justify-items: center;  /* Ensures the grid items are centered */
+  margin: 0 auto; /* Centre le conteneur si nécessaire */
 }
 
 

@@ -1,8 +1,9 @@
 /* Image Styles */
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 500px;
   margin: 0 auto;
-  height: auto;
+  /* height: auto; */
   border-radius: 8px;
   /* Rounded corners for a vintage feel */
   border: 1px solid #d0bfa8;
@@ -13,6 +14,7 @@ img {
   /* Slight background to give a vintage touch */
   padding: 5px;
   /* Padding around the image */
+  /* width: 500px; */
 }
 
 .container {
@@ -145,7 +147,6 @@ img {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure items scale properly */
   gap: 10px;
 }
-
 
 /* Mosaic effect */
 .mosaic-container {

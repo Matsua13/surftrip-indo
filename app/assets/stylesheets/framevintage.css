@@ -13,4 +13,6 @@
   /* Slightly rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Subtle shadow for depth */
+  overflow: hidden; /* Prevent content from overflowing */
+  box-sizing: border-box; /* Include padding in width calculations */
 }

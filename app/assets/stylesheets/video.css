@@ -1,7 +1,7 @@
 /* Arugam video */
 
 .arugam-video {
-  width: 70%;
+  width: 50%;
   height: auto;
   margin: 0 auto;
   border-radius: 8px;
@@ -13,6 +13,23 @@
   background-color: #f9f9f9;
   /* Slight background to give a vintage touch */
   padding: 5px;
+}
+
+.medewi-video {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  /* Rounded corners for a vintage feel */
+  border: 1px solid #d0bfa8;
+  /* Soft border color to match the main section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for a classic look */
+  background-color: #f9f9f9;
+  /* Slight background to give a vintage touch */
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .video .banner-video {

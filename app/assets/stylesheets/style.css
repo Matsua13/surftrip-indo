@@ -73,6 +73,9 @@ main {
 section {
   display: block;
   unicode-bidi: isolate;
+  align-items: center;  /* Center horizontally */
+  justify-content: center;  /* Center vertically if you want */
+  text-align: center;  /* Center text inside the section */
   /* width: 100%;
   max-width: 800px; Limit width for readability */
 }

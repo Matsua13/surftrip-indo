@@ -18,9 +18,11 @@
 }
 
 .images img {
-  width: 200px;
-  height: auto;
-  margin-right: 10px;
-  border-radius: 8px;
-  object-fit: cover;
+  width: 30%; /* Adjust to a percentage of the container's width */
+  max-width: 200px; /* Set a max width to prevent them from getting too large */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add spacing between images */
+  border-radius: 8px; /* Keep the rounded corners */
+  object-fit: cover; /* Ensure the image covers its space */
+  flex-shrink: 0; /* Prevent shrinking if the container gets too small */
 }

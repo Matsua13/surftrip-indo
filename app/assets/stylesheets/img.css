@@ -120,6 +120,7 @@ img {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .polaroid {
@@ -142,17 +143,13 @@ img {
   color: #333;
 }
 
-.mosaic-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure items scale properly */
-  gap: 10px;
-}
-
 /* Mosaic effect */
 .mosaic-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
+  justify-items: center;  /* Center items horizontally in each grid cell */
+  align-items: center;  /* Center items vertically in each grid cell */
 }
 
 .mosaic-item {
@@ -170,6 +167,22 @@ img {
   grid-column: span 2;
   grid-row: span 2;
 }
+
+#photo-6, #photo-7, #photo-4, #photo-1 {
+  height: 250px;
+  width: 350px;
+}
+
+#photo-5, #photo-10, #photo-8, #photo-9, #photo-11 {
+  height: 450px;
+  width: 350px;
+}
+
+#photo-12, #photo-13, #photo-14 {
+  width: 350px;
+  height: 290px;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {

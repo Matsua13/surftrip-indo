@@ -131,5 +131,22 @@
   <!-- External JavaScript Files -->
   <%= javascript_include_tag 'scrolling-wrapper' %>
   <%= javascript_include_tag 'play-pause' %>
+
+  <script>
+  // Function to show the modal
+  function showPresentation() {
+    const modal = document.getElementById('presentation-modal');
+    modal.style.display = 'flex'; // Change display to 'flex' to make it visible
+  }
+
+  // Optional: Function to close the modal when clicking outside of it
+  window.onclick = function(event) {
+    const modal = document.getElementById('presentation-modal');
+    if (event.target === modal) {
+      modal.style.display = 'none'; // Close the modal if the user clicks outside it
+    }
+  }
+</script>
+
 </body>
 </html>

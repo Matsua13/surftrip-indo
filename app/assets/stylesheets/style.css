@@ -11,13 +11,10 @@ body {
 
 /* Header Styles */
 header {
-  background: #fff;
-  /* White background for the header */
+  background: #fff; /* White background for the header */
   color: #333;
-  border-bottom: 1px solid #ddd;
-  /* Light border for a classic touch */
-  padding: 10px 0;
-  /* Some padding for better spacing */
+  border-bottom: 1px solid #ddd; /* Light border for a classic touch */
+  padding: 0 0 10px 0; /* No padding on top, 10px padding on bottom */
 }
 
 /* Banner Styles */

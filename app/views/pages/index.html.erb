@@ -39,7 +39,7 @@
           <h2>About Me</h2>
           <p>Hi, I’m Tifène!</p>
           <p>After finishing my Master’s degree in Human Resources and spending a year working at an international bank, I realized I needed a change. I wanted to reconnect with what truly makes me happy—the ocean. So, I packed my bags and spent 10 amazing months surfing in (mostly) Indonesia and Sri Lanka.</p>
-          <p>Along the way, I decided to challenge myself in a new way and started learning how to code with Le Wagon. It’s been such an incredible journey! It's a personal project, and I hope you enjoy exploring it as much as I did creating it!</p>
+          <p>Along the way, I decided to challenge myself in a new way and started learning how to code with Le Wagon. It’s been such an incredible journey! This site is personal, with all photos taken by me, so it's a fun and heartfelt journey, not professional content. I hope you enjoy exploring it as much as I did creating it!</p>
           <button onclick="document.getElementById('presentation-modal').style.display = 'none';">Close</button>
         </div>
       </div>
@@ -91,7 +91,7 @@
       <!-- Flash Alert -->
       <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
         <div class="flash-text">
-          <p>This site is my little corner to learn and grow in coding. It's personal, with all photos taken by me, so it's a fun and heartfelt journey, not professional content. You can click on the avatar of me for more informations.</p>
+          <p>This site is my little corner to learn and grow in coding. You can click on the avatar of me for more information.</p>
           <p>Much love 🫶</p>
         </div>
         <a data-bs-dismiss="alert" aria-label="Close">
@@ -125,23 +125,11 @@
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2024 Surftrip Around Indonesia & Sri Lanka</p>
+    <p>&copy; 2024 Surftrip Around Indonesia & Sri Lanka. All rights reserved.</p>
   </footer>
 
   <!-- External JavaScript Files -->
   <%= javascript_include_tag 'scrolling-wrapper' %>
   <%= javascript_include_tag 'play-pause' %>
-
-  <script>
-  function showPresentation() {
-    const modal = document.getElementById('presentation-modal');
-    modal.style.display = 'flex';
-  }
-
-  function hidePresentation() {
-    const modal = document.getElementById('presentation-modal');
-    modal.style.display = 'none';
-  }
-</script>
 </body>
 </html>

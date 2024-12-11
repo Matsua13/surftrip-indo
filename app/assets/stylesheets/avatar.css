@@ -1,0 +1,50 @@
+/* Ensure the banner is positioned relatively to contain the avatar */
+.banner {
+  position: relative;
+}
+
+/* Style for the avatar container */
+.avatar-container {
+  position: absolute; /* Position relative to the parent banner */
+  top: 20px; /* Adjust vertical placement */
+  left: 20px; /* Adjust horizontal placement */
+  z-index: 10; /* Ensure avatar is above the banner */
+}
+
+.avatar-large {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 0.5px solid white; /* Thin border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+
+/* Modal styles (example, you can customize further) */
+.presentation-modal {
+  position: fixed; /* Make the modal fixed so it stays in place on the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: none; /* Hide the modal by default */
+  z-index: 9999; /* Ensure the modal is on top */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  padding: 10px;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  z-index: 10000; /* Modal content should also be on top */
+}
+
+.modal-content h2 {
+  margin-top: 10px;
+}

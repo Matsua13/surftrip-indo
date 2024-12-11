@@ -8,14 +8,15 @@
 
   <!-- External CSS Files with Rails Asset Pipeline -->
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= stylesheet_link_tag 'scrolling-wrapper' %>
+  <%= stylesheet_link_tag 'scrolling-wrapper', media: 'all' %>
   <%= stylesheet_link_tag 'img' %>
   <%= stylesheet_link_tag 'alert' %>
   <%= stylesheet_link_tag 'footer' %>
   <%= stylesheet_link_tag 'video' %>
   <%= stylesheet_link_tag 'navbar' %>
   <%= stylesheet_link_tag 'framevintage' %>
-  <%= stylesheet_link_tag 'play-pause-button' %>
+  <%# <%= stylesheet_link_tag 'play-pause-button' %>
+  <%= stylesheet_link_tag 'avatar', media: 'all' %>
 
   <!-- Optionally include Javascript -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -26,6 +27,23 @@
   <!-- Header Section with Banner and Navigation -->
   <header>
     <div class="banner">
+      <!-- Avatar placed inside the .banner -->
+      <div class="avatar-container" onclick="showPresentation()">
+          <%= image_tag "medewi/me-sunrise.jpg",
+            class: "avatar-large", alt: "avatar-large" %>
+        </div>
+
+      <!-- Modal for presentation -->
+      <div id="presentation-modal" class="presentation-modal">
+        <div class="modal-content">
+          <h2>About Me</h2>
+          <p>Hi, I’m Tifène!</p>
+          <p>After finishing my Master’s degree in Human Resources and spending a year working at an international bank, I realized I needed a change. I wanted to reconnect with what truly makes me happy—the ocean. So, I packed my bags and spent 10 amazing months surfing in (mostly) Indonesia and Sri Lanka.</p>
+          <p>Along the way, I decided to challenge myself in a new way and started learning how to code with Le Wagon. It’s been such an incredible journey! It's a personal project, and I hope you enjoy exploring it as much as I did creating it!</p>
+          <button onclick="document.getElementById('presentation-modal').style.display = 'none';">Close</button>
+        </div>
+      </div>
+
       <!-- Video background for the banner -->
       <video autoplay muted loop class="banner-video">
         <source src="<%= asset_path('drone.mp4') %>" type="video/mp4">
@@ -34,7 +52,7 @@
 
       <!-- Banner Text -->
       <div class="banner-text">
-        <h1>𐌔𐌵𐌓𐌅 𐌕𐌓𐌉𐌐 𐌀𐌓Ꝋ𐌵𐌍𐌃 𐌉𐌍𐌃Ꝋ𐌍𐌄𐌔𐌉𐌀 & 𐌔𐌓𐌉 𐌋𐌀𐌍𐌊𐌀</h1>
+        <h1>𐌔𐌵𐌓𐌅 𐌕𐌓𐌉𐌐 𐌀𐌓Ꝋ𐌵𐌍𐌃 𐌉𐌍𐌃Ꝋ𐌍𐌄𐌔𐌉𐌀 & 𐌔R𐌉 𐌋𐌀𐌍𐌊𐌀</h1>
       </div>
     </div>
 
@@ -47,24 +65,24 @@
         <div></div>
       </div>
 
-    <!-- Navigation links -->
-    <ul>
-      <li><%= link_to 'Lombok', lombok_path %></li>
-      <li><%= link_to 'Medewi', medewi_path %></li>
-      <li><%= link_to 'Bukit Bali', bukit_bali_path %></li>
-      <li><%= link_to 'Sumbawa', sumbawa_path %></li>
-      <li><%= link_to 'Arugam Bay', arugam_bay_path %></li>
-    </ul>
-  </nav>
+      <!-- Navigation links -->
+      <ul>
+        <li><%= link_to 'Lombok', lombok_path %></li>
+        <li><%= link_to 'Medewi', medewi_path %></li>
+        <li><%= link_to 'Bukit Bali', bukit_bali_path %></li>
+        <li><%= link_to 'Sumbawa', sumbawa_path %></li>
+        <li><%= link_to 'Arugam Bay', arugam_bay_path %></li>
+      </ul>
+   </nav>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('nav');
-      const hamburger = document.querySelector('.hamburger');
-      nav.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    }
-  </script>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector('nav');
+        const hamburger = document.querySelector('.hamburger');
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      }
+    </script>
 </header>
 
   <!-- Main Content Section -->
@@ -73,8 +91,8 @@
       <!-- Flash Alert -->
       <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
         <div class="flash-text">
-          <span>The purpose of this site is to train me in coding. It is personal, all photos & videos are
-            mine, so it is not professional content.</span>
+          <p>This site is my little corner to learn and grow in coding. It's personal, with all photos taken by me, so it's a fun and heartfelt journey, not professional content. You can click on the avatar of me for more informations.</p>
+          <p>Much love 🫶</p>
         </div>
         <a data-bs-dismiss="alert" aria-label="Close">
           <i class="fas fa-times"></i>
@@ -113,5 +131,17 @@
   <!-- External JavaScript Files -->
   <%= javascript_include_tag 'scrolling-wrapper' %>
   <%= javascript_include_tag 'play-pause' %>
+
+  <script>
+  function showPresentation() {
+    const modal = document.getElementById('presentation-modal');
+    modal.style.display = 'flex';
+  }
+
+  function hidePresentation() {
+    const modal = document.getElementById('presentation-modal');
+    modal.style.display = 'none';
+  }
+</script>
 </body>
 </html>

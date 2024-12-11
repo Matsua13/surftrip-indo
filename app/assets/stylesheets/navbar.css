@@ -43,7 +43,7 @@ nav li a:hover {
   display: none; /* Default hidden for large screens */
   cursor: pointer;
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 20px;
   z-index: 11; /* Ensure it appears above everything */
 }

@@ -1,0 +1,27 @@
+<!-- Navigation menu -->
+<nav>
+  <!-- Hamburger icon -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation links -->
+  <ul>
+    <li><%= link_to 'Lombok', lombok_path %></li>
+    <li><%= link_to 'Medewi', medewi_path %></li>
+    <li><%= link_to 'Bukit Bali', bukit_bali_path %></li>
+    <li><%= link_to 'Sumbawa', sumbawa_path %></li>
+    <li><%= link_to 'Arugam Bay', arugam_bay_path %></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    const hamburger = document.querySelector('.hamburger');
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  }
+</script>

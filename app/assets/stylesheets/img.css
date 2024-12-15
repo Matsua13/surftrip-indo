@@ -181,6 +181,29 @@ img {
   height: 290px;
 }
 
+#pic-9, #pic-10, #pic-11, #pic-12, #pic-13, #pic-14 {
+  width: 200px;
+  height: 330px;
+}
+
+.grid-sumbawa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 15px;
+  padding: 20px;
+}
+
+.grid-sumbawa-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
